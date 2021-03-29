@@ -2,67 +2,69 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="viewport"
-          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>HTML Form</title>
     <link rel="stylesheet" href="./style.css">
   </head>
   <body>
-    <!--<h1>HTML Form</h1>-->
     <form
-    id="btn_save"
-    action="https://mate-academy-form-lesson.herokuapp.com/create-application"
-    method="post">
+      id="btn_save"
+      action="https://mate-academy-form-lesson.herokuapp.com/create-application"
+      method="post"
+    >
       <section class="section">
         <fieldset>
           <legend>Personal information</legend>
           <div class="block">
             <label for="surname">Surname:</label>
             <input
-            id="surname"
-            type="text"
-            name="inp_surname"
+              id="surname"
+              type="text"
+              name="surname"
+              autocomplete="off"
             >
             <br>
           </div>
           <div class="block">
             <label for="name">Name:</label>
             <input
-            id="name"
-            type="text"
-            name="inp_name"
-            maxlength="15"
-            minlength="3"
+              id="name"
+              type="text"
+              name="name"
+              maxlength="20"
+              autocomplete="off"
             >
             <br>
           </div>
           <div class="block">
             <label for="age">How old are You?</label>
             <input
-            id="age"
-            type="number"
-            name="inp_age"
-            value="12"
-            min="12"
-            max="100"
+              id="age"
+              type="number"
+              name="age"
+              value="12"
+              min="12"
+              max="100"
             >
             <br>
           </div>
           <div class="block">
             <label for="date_of_birth">Full date of birth:</label>
             <input
-            id="date_of_birth"
-            type="date"
-            name="inp_date_of_birth"
+              id="date_of_birth"
+              type="date"
+              name="date_of_birth"
             >
             <br>
           </div>
-          <label for="tirm">I accept the term of the agreement</label>
+          <label for="term">I accept the term of the agreement</label>
           <input
-          id="tirm"
-          type="checkbox"
-          name="check_tirm"
+            id="term"
+            type="checkbox"
+            name="check_term"
           >
           <br>
         </fieldset>
@@ -73,19 +75,20 @@
           <div class="block">
             <label for="email">E-mail:</label>
             <input
-            id="email"
-            type="email"
-            name="inp_email"
-            placeholder="email@example.com"
+              id="email"
+              type="email"
+              name="email"
+              placeholder="email@example.com"
             >
             <br>
           </div>
           <label for="password">Password:</label>
           <input
-          id="password"
-          type="password"
-          name="inp_password"
-          required
+            id="password"
+            type="password"
+            name="password"
+            minlength="8"
+            required
           >
           <br>
         </fieldset>
@@ -96,37 +99,43 @@
           <div class="block">
             <label for="cats">Do you love cats?
               <input
-              id="cats"
-              type="radio"
-              name="cats"
-              value="yes">
-              <input type="radio" name="radio_color">
+                id="cats"
+                type="radio"
+                name="cats"
+                value="yes"
+              >
+              <input
+                type="radio"
+                name="cats"
+                value="no">
               <br>
             </label>
           </div>
           <div class="block">
             <label for="color">What is your favorite color?</label>
             <input
-            id="color"
-            type="color"
-            name="cats"
-            value="yes">
+              id="color"
+              type="color"
+              name="color"
+            >
             <br>
           </div>
           <div class="block">
             <label for="time">What time do you go to bad?</label>
             <input
-            id="time"
-            type="time"
-            name="time-sleep">
+              id="time"
+              type="time"
+              name="time-sleep"
+            >
             <br>
           </div>
           <div class="block">
             <label for="brand_car">What are your favorite brand of cars?</label>
             <select
-            id="brand_car"
-            name="select_brand_car"
-            multiple>
+              id="brand_car"
+              name="select_brand_car"
+              multiple
+            >
               <option>BMW</option>
               <option>Audi</option>
               <option>Lada</option>
@@ -135,11 +144,12 @@
           </div>
           <label for="rate">How do you rate your work?</label>
           <input
-          id="rate"
-          type="range"
-          name="rate"
-          min="1"
-          max="10">
+            id="rate"
+            type="range"
+            name="rate"
+            min="1"
+            max="10"
+          >
           <br>
         </fieldset>
       </section>
@@ -158,10 +168,11 @@
         </fieldset>
       </section>
       <button
-      type="submit"
-      form="btn_save"
-      onsubmit="onSubmit()"
-      value="submit">
+        type="submit"
+        form="btn_save"
+        onsubmit="onSubmit()"
+        value="submit"
+      >
         Submit
       </button>
     </form>
